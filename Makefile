@@ -1,12 +1,6 @@
-CC ?= gcc
+procstatlib:
+	$(MAKE) procstat.o
+	$(AR) rcs procstat.a procstat.o
 
-.PHONY:all
-all: 
-	$(MAKE) compile
-
-
-compile:
-	$(CC) -o procstat -O0 -g main.c procstat.c
-
-clean:
-	rm -rf procstat *.o
+cleanprocstatlib:
+	rm -rf procstat.o procstat.a
