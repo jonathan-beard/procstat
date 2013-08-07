@@ -1,6 +1,9 @@
+CC   = clang
+CXX  = clang++
+
 procstatlib:
 	$(MAKE) procstat.o
-	$(AR) rcs procstat.a procstat.o
+	$(AR) rcs libprocstat.a procstat.o
 
 cleanprocstatlib:
-	rm -rf procstat.o procstat.a
+	rm -rf procstat.o libprocstat.a
